@@ -15,7 +15,7 @@ terraform {
 # Example: Create a local file
 resource "local_file" "example" {
   content  = "Hello, Terraform local!"
-  filename = "example.txt"
+  filename = "Salary.csv"
 }
 
 # Simulate a table by creating a CSV file
@@ -45,6 +45,12 @@ resource "local_file" "table_bq" {
     "type": "DATE",
     "mode": "NULLABLE",
     "description": "Date of joining"
+  },
+  {
+    "name": "Salary",
+    "type": "INTEGER",
+    "mode": "NULLABLE",
+    "description": "Salary of the person"
   }
 ]
 EOT
